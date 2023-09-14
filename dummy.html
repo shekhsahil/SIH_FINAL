@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="soil_1"></div>
+    <div id="soil_2"></div>
+    <div id="soil_3"></div>
+    <div id="soil_4"></div>
+
+    <script>
+      if (!!window.EventSource) {
+        var source = new EventSource("/events");
+
+        source.addEventListener(
+          "open",
+          function (e) {
+            console.log("Events Connected");
+          },
+          false
+        );
+        source.addEventListener(
+          "error",
+          function (e) {
+            if (e.target.readyState != EventSource.OPEN) {
+              console.log("Events Disconnected");
+            }
+          },
+          false
+        );
+
+        source.addEventListener(
+          "message",
+          function (e) {
+            console.log("message", e.data);
+          },
+          false
+        );
+
+        source.addEventListener(
+          "new_readings",
+          function (e) {
+            console.log("new_readings", e.data);
+            var obj = JSON.parse(e.data);
+            document.getElementById("soil_1").innerHTML = obj.Soil_1.toFixed(2);
+            document.getElementById("soil_2").innerHTML = obj.Soil_2.toFixed(2);
+            document.getElementById("soil_3").innerHTML = obj.Soil_3.toFixed(2);
+            document.getElementById("soil_4").innerHTML = obj.Soil_4.toFixed(2);
+          },
+          false
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <title>Configuration Page</title>
+    <link rel="stylesheet" href="cp.css" />
+    <link
+      rel="icon"
+      href="https://img.favpng.com/17/15/19/configuration-icon-png-favpng-Rtjg2MZBKJN91fvc8T8wn8EqA.jpg"
+    />
+  </head>
+<style>
+  *{
+    margin:0;
+  }
+  nav{
+    background-color: white;
+    width:5000px;
+    height:70px;
+  }
+  nav li{
+    display:inline-flex;
+    color:black;
+    font-size: 28px;
+    font-family: monospace;
+    margin-left:200px;
+    
+
+  }
+</style>
+  <body>
+   <nav >
+    <ul>
+      <li style="color:black;"> <a href="Homepage.html">Home</a></li>
+      <li style="color:black;"> <a href="#">About</a></li>
+      <li style="color:black;"><a href="contact.html">Contact Us</a> </li>
+      <li style="color:black;"> <a href="index.html">Logout</a></li>
+      
+    </ul>
+   </nav>
+   <br><br>
+    
+      <center>
+        <div class="system_name_input">
+          <input type="text" placeholder="Enter System Name" id="inputField" required/>
+        </div>
+        <form action="" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;" >
+          <div class="card shadow">
+            <center>
+              <label for="crop_types">
+                <p
+                  style="
+                    color: rgb(255, 255, 255);
+                    font-family: monospace;
+                    margin-top: 40px;
+                    font-size: 30px;
+                    font-weight: bolder;
+                  "
+                >
+                  CROP TYPE
+                </p>
+              </label>
+<br>
+              <select id="Crop_types">
+                <option value="Kharif">Kharif</option>
+                <option value="Rabi">Rabi</option>
+                <option value="Zaid">Zaid</option>
+                <option value="Others">Others</option>
+              </select>
+            </center>
+          </div>
+
+          <div class="card shadow">
+            <center>
+              <label for="Crop_names">
+                <p
+                  style="
+                    color: rgb(255, 255, 255);
+                    font-family: monospace;
+                    margin-top: 40px;
+                    font-size: 30px;
+                    font-weight: bolder;
+                  "
+                >
+                  CROP NAME
+                </p>
+              </label>
+<br>
+              <select id="Crop_names"></select>
+            </center>
+          </div>
+
+          <div class="card shadow">
+            <center>
+              <label for="Crop_stage">
+                <p
+                  style="
+                    color: rgb(255, 255, 255);
+                    font-family: monospace;
+                    margin-top: 40px;
+                    font-size: 30px;
+                    font-weight: bolder;
+                  "
+                >
+                  CROP STAGE
+                </p>
+              </label>
+              <br>
+
+              <input type="decimal" id="decimal_input_send" placeholder="In Hours"/>
+            </center>
+          </div>
+          <div class="card shadow" style="width:250px;">
+            <center>
+              <label for="Crop_stage">
+                <p
+                  style="
+                    color: rgb(255, 255, 255);
+                    font-family: monospace;
+                    margin-top: 40px;
+                    font-size: 25px;
+                    font-weight: bolder;
+                  "
+                >
+                  WATER REQUIRED
+                </p>
+              </label>
+              <br>
+              <input type="text" id="decimal_area_send"   placeholder="In metre sq."/>
+              <br>
+              <br>
+              <input type="text" id="moistureLevel" placeholder="in %">
+              <!-- <div id="result"></div> -->
+            </center>
+          </div>
+        </form>
+        <br />
+        <br />
+        <!-- <button onclick="calculateWater()"> calculate</button> -->
+
+ 
+        <button onclick="passValues();calculateWater();">SAVE</button>
+      </center>
+    
+    <script src="script.js"></script>
+    <script src="page1.js"></script>
+    <script src="page2.js"></script>
+    <script src="ml.js"></script>
+
+    <!-- <script src="weather_API_.js"></script> -->
+    
+    <script>
+      
+  </script>
+
+
+  </body>
+</html>

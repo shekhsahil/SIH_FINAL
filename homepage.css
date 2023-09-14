@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  top:0%;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Hide the scrollbar */
+}
+html{
+/* scroll-behavior:scroll; */
+overflow-y: scroll;
+}
+section {
+  height: 700px; /* Set each section to occupy the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+/* Style individual sections */
+#section1 {
+  background-color: #ffffff;
+  color: #fff;
+  
+}
+
+#section2 {
+  background-color: #ffffff;
+  /* color:green; */
+  height: 1600px; /* Set each section to occupy the full viewport height */
+  margin-top:100px;
+  
+}
+.title{
+  
+  font-size: 120px;
+  color:green;
+  padding:0;
+  font-family: monospace;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+}
+.add{
+  color:white;
+  background-color: green;
+  font-family: monospace;
+  width:700px;
+  height:200px;
+  border-radius:100px;
+  font-size: 40px;
+  transition: ease-in-out 400ms;
+}
+.add:hover{
+  background-color: white;
+  color:green;
+  transform: scale(1.2);
+  border: 10px solid green;
+}
+.add:active{
+
+  transform: scale(0.7);
+  float:inline-end;
+
+
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.scroll-container {
+  width: 100%;
+  height: 80vh; /* Adjust as needed */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent content from wrapping */
+}
+
+.scroll-content {
+  width: 200%; /* Double the width to create a scrollable area */
+}
+
+/* Style the content within the scrollable area */
+/* You can customize this as needed */
+.scroll-content div {
+  display: inline-block;
+  width: 100vh;
+  height: 80vh;
+  background-color: #3498db;
+  margin-right: 20px;
+}
+img{
+  width:100vw;
+  height:80vh;
+}
+
+::-webkit-scrollbar {
+  
+  display: none;
+}
+.logo{
+  width: 140px;
+  height:140px;
+  border-radius: 100%;
+}
+
+li{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+  word-wrap: break-word; 
+  text-align: left;
+  margin-left:80px;
+  margin-right:80px;
+
+
+}
