@@ -168,8 +168,11 @@ body {
 }
 .right_fixed_bar_c4 :where(img)
 {
+  
   height:500px;
-  width:900px;
+  width:600px;
+  border-radius: 30px;
+
 
 }
 #c5{
