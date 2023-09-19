@@ -10,7 +10,7 @@
     //////////////////////////////////
 
     var landArea = parseFloat(document.getElementById("decimal_area_send").value);
-    var moistureLevel = parseFloat(document.getElementById("moistureLevel").value);
+    var moistureLevel = 50;
     
 
     // Check if inputs are valid numbers
